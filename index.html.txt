@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Jio Style Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">JIO</div>
+        <nav>
+            <a href="#">Mobile</a>
+            <a href="#">Fiber</a>
+            <a href="#">Business</a>
+            <a href="#">Support</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Digital Life</h1>
+        <p>Fast Internet • Unlimited Calls • Best Plans</p>
+        <button>Explore Plans</button>
+    </section>
+
+    <!-- Plans Section -->
+    <section class="plans">
+        <div class="card">
+            <h2>₹299</h2>
+            <p>1.5GB/Day</p>
+        </div>
+        <div class="card">
+            <h2>₹666</h2>
+            <p>1.5GB/Day • 84 Days</p>
+        </div>
+        <div class="card">
+            <h2>₹999</h2>
+            <p>2GB/Day</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 My Jio Style Website</p>
+    </footer>
+
+</body>
+</html>
