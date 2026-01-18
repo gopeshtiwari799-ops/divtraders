@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>DIV Traders</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -9,54 +8,17 @@
 
 <header class="navbar">
   <div class="logo">DIV Traders</div>
-  <input type="text" placeholder="Search products...">
+  <input placeholder="Search products">
   <div class="nav-right">
-    <span>Login</span>
-    <span>Cart 🛒</span>
+    <a href="login.html">Login</a>
+    <span id="cart">Cart 🛒 (0)</span>
   </div>
 </header>
 
-<div class="main">
-
-  <aside class="sidebar">
-    <h3>Categories</h3>
-    <a href="#">Electronics</a>
-    <a href="#">Fashion</a>
-    <a href="#">Groceries</a>
-    <a href="#">Mobiles</a>
-    <a href="#">Home</a>
-  </aside>
-
-  <section class="products">
-    <h2>Best Deals For You</h2>
-
-    <div class="product-grid">
-
-      <div class="product-card">
-        <img src="https://via.placeholder.com/200">
-        <h4>Smart Phone</h4>
-        <p class="price">₹12,999</p>
-        <button>Add to Cart</button>
-      </div>
-
-      <div class="product-card">
-        <img src="https://via.placeholder.com/200">
-        <h4>Headphones</h4>
-        <p class="price">₹1,499</p>
-        <button>Add to Cart</button>
-      </div>
-
-      <div class="product-card">
-        <img src="https://via.placeholder.com/200">
-        <h4>Smart Watch</h4>
-        <p class="price">₹2,999</p>
-        <button>Add to Cart</button>
-      </div>
-
-    </div>
-  </section>
-
-</div>
+<section class="products">
+  <h2>Best Deals</h2>
+  <div class="product-grid" id="productGrid"></div>
+</section>
 
 <script src="script.js"></script>
 </body>
