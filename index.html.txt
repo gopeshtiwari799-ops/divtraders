@@ -1,50 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Jio Style Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>DIV Traders | Shop</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="logo">JIO</div>
-        <nav>
-            <a href="#">Mobile</a>
-            <a href="#">Fiber</a>
-            <a href="#">Business</a>
-            <a href="#">Support</a>
-        </nav>
-    </header>
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="logo">DIV Traders</div>
+  <input type="text" placeholder="Search products...">
+  <div class="nav-right">
+    <span>Login</span>
+    <span>Cart 🛒</span>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to Digital Life</h1>
-        <p>Fast Internet • Unlimited Calls • Best Plans</p>
-        <button>Explore Plans</button>
-    </section>
+<!-- ===== MAIN SECTION ===== -->
+<div class="main">
 
-    <!-- Plans Section -->
-    <section class="plans">
-        <div class="card">
-            <h2>₹299</h2>
-            <p>1.5GB/Day</p>
-        </div>
-        <div class="card">
-            <h2>₹666</h2>
-            <p>1.5GB/Day • 84 Days</p>
-        </div>
-        <div class="card">
-            <h2>₹999</h2>
-            <p>2GB/Day</p>
-        </div>
-    </section>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h3>Categories</h3>
+    <a href="#">Electronics</a>
+    <a href="#">Fashion</a>
+    <a href="#">Groceries</a>
+    <a href="#">Mobiles</a>
+    <a href="#">Home</a>
+  </aside>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 My Jio Style Website</p>
-    </footer>
+  <!-- Products -->
+  <section class="products">
+    <h2>Best Deals For You</h2>
 
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200">
+        <h4>Smart Phone</h4>
+        <p class="price">₹12,999</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200">
+        <h4>Headphones</h4>
+        <p class="price">₹1,499</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200">
+        <h4>Smart Watch</h4>
+        <p class="price">₹2,999</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200">
+        <h4>Bluetooth Speaker</h4>
+        <p class="price">₹1,199</p>
+        <button>Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
