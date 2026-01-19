@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Signup</title>
+</head>
+<body>
+
+<h2>Signup</h2>
+
+<input placeholder="Name" id="name"><br><br>
+<input placeholder="Mobile" id="mobile"><br><br>
+<input placeholder="Email" id="email"><br><br>
+<input placeholder="Location"><br><br>
+<input placeholder="Address"><br><br>
+<input placeholder="User ID" id="userid"><br><br>
+<input placeholder="Password" id="password" type="password"><br><br>
+
+<button onclick="signup()">Create Account</button>
+
+<script>
+function signup(){
+  let user = {
+    name: name.value,
+    mobile: mobile.value,
+    email: email.value,
+    userid: userid.value,
+    password: password.value
+  };
+  localStorage.setItem("user", JSON.stringify(user));
+  alert("Signup Successful");
+  window.location="login.html";
+}
+</script>
+
+</body>
+</html>
