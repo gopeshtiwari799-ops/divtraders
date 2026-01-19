@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DIV Traders</title>
-  <link rel="stylesheet" href="style.css">
+  <title>My Shop</title>
+  <style>
+    body { font-family: Arial; padding:20px; }
+    .product { border:1px solid #ccc; padding:10px; margin:10px; }
+    button { padding:6px 10px; }
+  </style>
 </head>
 <body>
 
-<header class="navbar">
-  <div class="logo">DIV Traders</div>
-  <input placeholder="Search products">
-  <div class="nav-right">
-    <a href="login.html">Login</a>
-    <span id="cart">Cart 🛒 (0)</span>
-  </div>
-</header>
+<h1>🛒 Dashboard</h1>
 
-<section class="products">
-  <h2>Best Deals</h2>
-  <div class="product-grid" id="productGrid"></div>
-</section>
+<a href="login.html">Login</a> |
+<a href="signup.html">Signup</a> |
+<a href="order.html">My Orders</a>
 
-<script src="script.js"></script>
+<h2>🔥 Offer Products</h2>
+
+<div class="product">
+  <h3>Mobile Phone</h3>
+  <p>Price: ₹25000</p>
+  <button onclick="addOrder(25000)">Order</button>
+</div>
+
+<div class="product">
+  <h3>Headphone (Offer)</h3>
+  <p>Price: ₹2000</p>
+  <button onclick="addOrder(2000)">Order</button>
+</div>
+
+<script>
+function addOrder(price){
+  if(price < 2000){
+    alert("Minimum order ₹2000");
+    return;
+  }
+  let orders = JSON.parse(localStorage.getItem("orders")) || [];
+  orders.push({price: price, date: new Date().toLocaleString()});
+  localStorage.setItem("orders", JSON.stringify(orders));
+  alert("Order Added");
+}
+</script>
+
 </body>
 </html>
