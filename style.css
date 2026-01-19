@@ -4,3 +4,84 @@ body { font-family: Arial; background:#f1f3f6; padding:20px }
 .product-card { background:white;padding:10px;width:200px;text-align:center }
 button { background:#ff9f00;border:none;padding:5px;cursor:pointer }
 a { color:white; text-decoration:none; margin-right:10px }
+/* ========================= */
+/* ===== RESPONSIVE CSS ==== */
+/* ========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .navbar input {
+    width: 30%;
+  }
+
+  .product-card {
+    width: 45%;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .navbar input {
+    width: 100%;
+  }
+
+  .nav-right {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  /* Main layout */
+  .main {
+    flex-direction: column;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+  }
+
+  .sidebar a {
+    white-space: nowrap;
+    background: #f1f3f6;
+  }
+
+  /* Products */
+  .products {
+    padding: 10px;
+  }
+
+  .product-grid {
+    justify-content: center;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+
+  /* Product page */
+  #product img {
+    width: 100%;
+  }
+
+  /* Login page */
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
