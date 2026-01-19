@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Smart Phone",
+    "price": 12999,
+    "image": "https://via.placeholder.com/200",
+    "description": "Latest smartphone with high performance"
+  },
+  {
+    "id": 2,
+    "name": "Headphones",
+    "price": 1499,
+    "image": "https://via.placeholder.com/200",
+    "description": "Noise cancelling headphones"
+  },
+  {
+    "id": 3,
+    "name": "Smart Watch",
+    "price": 2999,
+    "image": "https://via.placeholder.com/200",
+    "description": "Fitness tracking smartwatch"
+  }
+]
