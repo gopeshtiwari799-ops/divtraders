@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="product"></div>
+
+<script>
+const id = new URLSearchParams(window.location.search).get("id");
+
+fetch("products.json")
+.then(r=>r.json())
+.then(d=>{
+  const p = d.find(x=>x.id==id);
+  document.getElementById("product").innerHTML = `
+    <h2>${p.name}</h2>
+    <img src="${p.image}">
+    <p>${p.description}</p>
+    <h3>₹${p.price}</h3>`;
+});
+</script>
+</body>
+</html>
