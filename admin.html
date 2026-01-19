@@ -1,31 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Admin Dashboard | DIV Traders</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
+<html>
 <body>
 
-<h2>Admin – Add Product</h2>
+<h2>Admin Panel</h2>
 
-<div style="max-width:400px;background:#fff;padding:20px;border-radius:8px;">
-  <input id="pname" placeholder="Product Name"><br><br>
-  <input id="pprice" placeholder="Price"><br><br>
-  <input id="pimage" placeholder="Image URL"><br><br>
-  <textarea id="pdesc" placeholder="Description"></textarea><br><br>
+<p>Visitor Data (Local)</p>
 
-  <!-- 👇 IMPORTANT -->
-  <button id="addBtn">Add Product</button>
-</div>
-
-<!-- 👇 script END me hona chahiye -->
-<script src="script.js"></script>
+<pre id="data"></pre>
 
 <script>
-  // Button click binding
-  document.getElementById("addBtn").addEventListener("click", addProduct);
+data.innerText = localStorage.getItem("user");
 </script>
 
 </body>
