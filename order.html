@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Orders</title>
+</head>
+<body>
+
+<h2>My Orders</h2>
+<div id="orders"></div>
+
+<button onclick="payment()">Pay Now</button>
+
+<script>
+let orders = JSON.parse(localStorage.getItem("orders")) || [];
+let total = 0;
+
+orders.forEach(o=>{
+  total += o.price;
+  ordersDiv.innerHTML += `<p>₹${o.price} - ${o.date}</p>`;
+});
+
+ordersDiv.innerHTML += `<h3>Total: ₹${total}</h3>`;
+
+function payment(){
+  if(total < 2000){
+    alert("Minimum payment ₹2000");
+  }else{
+    alert("Payment Successful (Demo)");
+    localStorage.removeItem("orders");
+  }
+}
+</script>
+
+</body>
+</html>
