@@ -1,12 +1,29 @@
-let cartCount = 0;
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+document.getElementById("cart").innerText = `Cart 🛒 (${cart.length})`;
 
-// Cart count show karne ke liye
-const cartSpan = document.querySelector(".nav-right span:last-child");
-
-document.querySelectorAll(".product-card button").forEach(button => {
-  button.addEventListener("click", () => {
-    cartCount++;
-    cartSpan.innerText = "Cart 🛒 (" + cartCount + ")";
-    alert("Product added to cart!");
+fetch("products.json")
+  .then(res => res.json())
+  .then(data => {
+    const grid = document.getElementById("productGrid");
+    data.forEach(p => {
+      grid.innerHTML += `
+        <div class="product-card">
+          <img src="${p.image}">
+          <h4>${p.name}</h4>
+          <p class="price">₹${p.price}</p>
+          <button onclick="viewProduct(${p.id})">View</button>
+          <button onclick="addToCart(${p.id})">Add to Cart</button>
+        </div>`;
+    });
   });
-});
+
+function addToCart(id) {
+  cart.push(id);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  document.getElementById("cart").innerText = `Cart 🛒 (${cart.length})`;
+  alert("Added to cart");
+}
+
+function viewProduct(id) {
+  window.location.href = `product.html?id=${id}`;
+}
