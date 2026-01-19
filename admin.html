@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Admin Dashboard | DIV Traders</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
@@ -14,9 +15,18 @@
   <input id="pprice" placeholder="Price"><br><br>
   <input id="pimage" placeholder="Image URL"><br><br>
   <textarea id="pdesc" placeholder="Description"></textarea><br><br>
-  <button onclick="addProduct()">Add Product</button>
+
+  <!-- 👇 IMPORTANT -->
+  <button id="addBtn">Add Product</button>
 </div>
 
+<!-- 👇 script END me hona chahiye -->
 <script src="script.js"></script>
+
+<script>
+  // Button click binding
+  document.getElementById("addBtn").addEventListener("click", addProduct);
+</script>
+
 </body>
 </html>
